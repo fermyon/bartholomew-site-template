@@ -25,3 +25,5 @@ date = "Nov. 15, 2021"
 ---
 
 This is an example home page written in _Markdown_.
+
+You can find this text in `content/index.md`.
