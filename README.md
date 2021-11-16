@@ -11,24 +11,29 @@ This repository is a template for creating new [Bartholomew](https://github.com/
 - `static/`: Static assets like images, CSS, and downloads go in here.
 - `templates/`: Your handlebars templates go here. 
 
-## Installing Bartholomew
+## Installation of Wagi, Bartholomew, and the fileserver
+
+To use Bartholomew, you will need to install [Wagi](https://github.com/deislabs/wagi).
+Once you have Wagi installed, you can continue setting up Bartholomew.
 
 If you haven't already, you will need to download a copy of `bartholomew.wasm`.
 You can get this from the [Bartholomew GitHub repo](https://github.com/technosophos/bartholomew).
+You will also need the [Wagi Fileserver](https://github.com/deislabs/wagi-fileserver).
 
-Once you have downloaded it, you can either:
+Once you have copies of `bartholomew.wasm` and `fileserver.gr.wasm`, you can do one of two things:
 
-1. Put it in this directory
-2. OR Modify `modules.toml` to point to the full path of `bartholomew.wasm`
+1. Put both modules in this directory
+2. OR Modify `modules.toml` to point to the full path of `bartholomew.wasm` and `fileserver.gr.wasm`
 
-## Serving Static Files
+To start Bartholomew, run the following command from this directory:
 
-To serve static files, your `modules.toml` will need to point to an instance of the [Wagi Fileserver](https://github.com/deislabs/wagi-fileserver). You can download a copy of the fileserver from the [releases page](https://github.com/deislabs/wagi-fileserver/releases).
+```console
+$ wagi -c modules.toml
+No log_dir specified, using temporary directory /var/folders/rk/mkbs8vx12zs0gkm680h_gth00000gn/T/.tmpvkGeXG for logs
+Ready: serving on 127.0.0.1:3000
+```
 
-Once you have downloaded it, you can either:
-
-1. Put it in this directory
-2. OR Modify `modules.toml` to point to the full path of `fileserver.gr.wasm`
+Now you can point your web browswer to `http://127.0.0.1:3000/` and see your new Bartholomew site.
 
 ## About the License
 
