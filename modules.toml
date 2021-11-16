@@ -1,0 +1,11 @@
+[[module]]
+# Download the Wagi fileserver, and then set this path to point to fileserver.gr.wasm
+module = "fileserver.gr.wasm"
+route = "/static/..."
+volumes = {"/" = "static/"}
+
+[[module]]
+# Download the Bartholomew server and then set this path to point to bartholomew.wasm
+module = "bartholomew.wasm"
+route = "/..."
+volumes = { "content/" = "content/" , "templates/" = "templates/", "scripts/" = "scripts/", "config/" = "config/"}
