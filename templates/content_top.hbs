@@ -3,11 +3,14 @@
 
 <head>
     {{! Use the formatter.title and formatter.description in the head }}
-    <title>{{page.frontmatter.title}} | {{site.info.title}}</title>
-    {{#if page.frontmatter.description}}
+    <title>{{page.head.title}} | {{site.info.title}}</title>
+    {{#if page.head.description}}
     {{! Only render the description if it exists }}
-    <meta name="description" content="{{page.frontmatter.description}}">
+    <meta name="description" content="{{page.head.description}}">
     {{/if}}
+
+    <link href="/atom" type="application/atom+xml" rel="alternate" title="Atom feed" />
+
     <!-- Twitter Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -29,6 +32,10 @@
 
         .learn-more-card-group {
             margin-top: 2em;
+        }
+
+        pre {
+            background-color: #efefef;
         }
     </style>
 </head>

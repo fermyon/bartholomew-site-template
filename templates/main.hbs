@@ -1,21 +1,27 @@
-{{! This adds the HTML head section and the beginning of the body. See content_top.hbs. }}
 {{> content_top }}
+
+{{#if page.published }}{{else}}
+<div class="col-md-8 alert alert-warning" role="alert">
+This content is unpublished.
+</div>
+{{/if}}
 
 <div class="col-md-8">
     <article class="blog-post">
-        {{#with page.frontmatter}}
-        <h1 class="blog-post-title border-bottom">{{title}}</h2>
-            <p class="blog-post-meta">{{#if extra.date}}Published: {{extra.date}}{{/if}}</p>
-            {{/with}}
+        <h1 class="blog-post-title border-bottom">{{page.head.title}}</h1>
+            <p class="blog-post-meta">
+                {{#if page.head.date}}{{date_format site.info.extra.date_style page.head.date}} {{/if}}
+                {{#if page.head.extra.author}} by <a
+                    href="{{page.head.extra.author_page}}">{{page.head.extra.author}}</a>{{/if}}
+            </p>
+            <div class="tag-list">
+                {{#each page.head.tags}}<span class="badge bg-secondary ms-1"><a href="/tag?{{this}}" class="text-light">{{this}}</a></span>{{/each}}
+            </div>
             {{! Since this is HTML, we use the triple-curly }}
             {{{page.body}}}
-            {{! Remove the `!` on the line below to see how to call a Rhai script }}
-            {{! echo "world" }}
     </article>
 </div><!-- end col -->
 
-{{! This adds the sidebar }}
 {{> content_sidebar }}
 
-{{! This closes the body. See content_bottom.hbs. }}
 {{> content_bottom }}
