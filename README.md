@@ -1,6 +1,6 @@
 # Bartholomew Site Template
 
-This repository is a template for creating new [Bartholomew](https://github.com/technosophos/bartholomew) websites.
+This repository is a template for creating new [Bartholomew](https://github.com/fermyon/bartholomew) websites.
 
 ## Directory Structure:
 
@@ -17,7 +17,7 @@ To use Bartholomew, you will need to install [Wagi](https://github.com/deislabs/
 Once you have Wagi installed, you can continue setting up Bartholomew.
 
 If you haven't already, you will need to download a copy of `bartholomew.wasm`.
-You can get this from the [Bartholomew GitHub repo](https://github.com/technosophos/bartholomew).
+You can get this from the [Bartholomew GitHub repo](https://github.com/fermyon/bartholomew).
 You will also need the [Wagi Fileserver](https://github.com/deislabs/wagi-fileserver).
 
 Once you have copies of `bartholomew.wasm` and `fileserver.gr.wasm`, you can do one of two things:
