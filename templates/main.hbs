@@ -3,7 +3,7 @@
 
 <div class="col-md-8">
     <article class="blog-post">
-        {{#with page.frontmatter}}
+        {{#with page.head}}
         <h1 class="blog-post-title border-bottom">{{title}}</h2>
             <p class="blog-post-meta">{{#if extra.date}}Published: {{extra.date}}{{/if}}</p>
             {{/with}}
