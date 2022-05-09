@@ -10,7 +10,7 @@ title = "Welcome to Bartholomew"
 # OPTIONAL
 
 # The description of the page.
-description = "The Micro-CMS for Wagi"
+description = "The Micro-CMS for WebAssembly and Spin"
 
 # The name of the template to use. `templates/` is automatically prepended, and `.hbs` is appended.
 # So if you set this to `blog`, it becomes `templates/blog.hbs`.
