@@ -10,6 +10,7 @@ This repository is a template for creating new [Bartholomew](https://github.com/
 - `spin.toml`: The configuration file for the Spin application.
 - `static/`: Static assets like images, CSS, and downloads go in here.
 - `templates/`: Your handlebars templates go here. 
+- `shortcodes/`: Your [shortcodes](https://bartholomew.fermyon.dev/shortcodes) go here. 
 
 ## Installation of Spin
 
