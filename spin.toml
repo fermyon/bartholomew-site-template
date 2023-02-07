@@ -5,15 +5,19 @@ description = "Your new Bartholomew website."
 trigger = { type = "http", base = "/" }
 
 [[component]]
-source = "modules/bartholomew.wasm"
 id = "bartholomew"
-files = [ "content/**/*", "templates/*", "scripts/*", "config/*", "shortcodes/*"]
+files = [ "content/**/*" , "templates/*", "scripts/*", "config/*", "shortcodes/*"]
+[component.source]
+url = "https://github.com/fermyon/bartholomew/releases/download/v0.6.0/bartholomew.wasm"
+digest = "sha256:b64bc17da4484ff7fee619ba543f077be69b3a1f037506e0eeee1fb020d42786"
 [component.trigger]
 route = "/..."
 
 [[component]]
-source = "modules/spin_static_fs.wasm"
 id = "fileserver"
 files = [ { source = "static/", destination = "/" } ]
+[component.source]
+url = "https://github.com/fermyon/spin-fileserver/releases/download/v0.0.1/spin_static_fs.wasm"
+digest = "sha256:650376c33a0756b1a52cad7ca670f1126391b79050df0321407da9c741d32375"
 [component.trigger]
 route = "/static/..."
