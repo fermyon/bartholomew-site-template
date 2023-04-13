@@ -10,14 +10,13 @@
             {{! Since this is HTML, we use the triple-curly }}
             {{{page.body}}}
             {{! Remove the `!` on the line below to see how to call a Rhai script }}
-            {{ echo "world" }}
-        <div>Checkout the <a href="/blog">blog</a></div> 
+            {{! echo "world" }}
     </article>
+    <div><a href="/blog">← Back to blog listing</a></div>
 </div><!-- end col -->
 
 {{! This adds the sidebar }}
 {{> content_sidebar }}
-
 
 {{! This closes the body. See content_bottom.hbs. }}
 {{> content_bottom }}

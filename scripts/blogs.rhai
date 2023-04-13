@@ -26,10 +26,20 @@ for item in keys {
             uri: path,
             page: pages[item],
         });
-        //blog_pages[path] = pages[item];
     }
    
 }
-// Newest to oldest, assuming you put the date in the URI
-blog_pages.reverse();
+
+// Return the blogs sorted newest to oldest
+fn sort_by_date(a, b) {
+    if a.page.head.date < b.page.head.date {
+        1
+    } else {
+        -1
+    }
+}
+
+// Sort by the value of the page date.
+blog_pages.sort(Fn("sort_by_date"));
+
 blog_pages
