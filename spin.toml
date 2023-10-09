@@ -8,8 +8,8 @@ trigger = { type = "http", base = "/" }
 id = "bartholomew"
 files = [ "content/**/*" , "templates/**/*", "scripts/*", "config/*", "shortcodes/*"]
 [component.source]
-url = "https://github.com/fermyon/bartholomew/releases/download/v0.6.0/bartholomew.wasm"
-digest = "sha256:b64bc17da4484ff7fee619ba543f077be69b3a1f037506e0eeee1fb020d42786"
+url = "https://github.com/fermyon/bartholomew/releases/download/v0.9.0/bartholomew.wasm"
+digest = "sha256:c7261135e5e8057c0f4646efd0df2145109e60b7c1911726c3655abf58e846a9"
 [component.trigger]
 route = "/..."
 
