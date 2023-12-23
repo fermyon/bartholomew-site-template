@@ -20,8 +20,8 @@ Once you have Wagi installed, you can continue setting up Bartholomew.
 To start your website, run the following command from this directory:
 
 ```console
-$ spin up --follow-all
-spin up --follow-all
+$ spin up
+spin up
 Serving HTTP on address http://127.0.0.1:3000
 Available Routes:
   bartholomew: http://127.0.0.1:3000 (wildcard)
